@@ -1,0 +1,4 @@
+/* pages/circle/circle.wxss */
+.imgitem{
+  width: 100%;
+}

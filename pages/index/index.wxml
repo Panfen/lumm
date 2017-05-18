@@ -1,10 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <swiper indicator-dots="true"
+    autoplay="true" interval="4000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  mode="scaleToFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="content-wrap" wx:for="{{content}}" wx:key="">
+    <view class="content-item">
+     <label class="title">{{item.title}}</label>
+     <image src="{{item.cover}}"></image>
+     <label class="desc">{{item.desc}}</label>
+    </view>
   </view>
 </view>

@@ -1,0 +1,65 @@
+/* pages/forum/forum.wxss */
+.areaw-outwrap{
+  width: 100%;
+  padding: 0.4em;
+  background: #fff;
+  margin-bottom: 0.2em;
+}
+.areaw-outwrap .areawrap-innerwrap{
+  display: flex;
+  flex-direction: row;
+}
+.areaw-outwrap .areawrap-innerwrap .area{
+  width: 48%;
+  height: 6em;
+  margin:0.2em;
+  overflow: hidden;
+  position: relative;
+}
+.areaw-outwrap .areawrap-innerwrap .area:first-child{
+  margin-left:0.6em;
+}
+.areaw-outwrap .areawrap-innerwrap .area:last-child{
+  margin-right:0.6em;
+}
+.areaw-outwrap .areawrap-innerwrap .area label{
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  bottom: 0.2em;
+  left: 0.2em;
+  padding: 0.6em 0 0.4em 0.4em;
+  font-size:0.7em;
+  color:#fff;
+  background:linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); 
+}
+.areaw-outwrap .areawrap-innerwrap .area image{
+  height: 100%;
+}
+
+/*********/
+.topicwrap .topic{
+  display: flex;
+  flex-direction: row;
+  padding: 0.6em;
+  background: #fff;
+}
+.topicwrap .topic image{
+  width: 4.4em;
+  height: 4.4em;
+  margin-right: 0.26em;
+  display: inline-block;
+  border: 1px solid #eee;
+}
+.topicwrap .topic .content{
+  flex: 1;
+}
+.topicwrap .topic .content label.title{
+  font-size: 0.8em;
+  display: block;
+  font-weight: 600;
+}
+.topicwrap .topic .content label.desc{
+  font-size: 0.7em;
+  color:#666;
+}

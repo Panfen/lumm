@@ -1,12 +1,30 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/circle/circle",
+    "pages/forum/forum"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "喵院"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "喵语"
+      },
+      {
+        "pagePath": "pages/circle/circle",
+        "text": "喵图"
+      }
+    ]
   }
 }
