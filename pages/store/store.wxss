@@ -1,0 +1,134 @@
+/* pages/store/store.wxss */
+page{
+  background: #fff;
+}
+.searchwrap{
+  width: 100%;
+  background: #dedede;
+}
+.searchbar{
+  width: 94%;
+  margin:0.4em auto;
+  display: flex;
+  justify-content: row;
+}
+.searchbar input{
+  flex: 1;
+  padding-left: 0.4em;
+  height: 1.6em;
+  font-size: 0.8em;
+  color:#333;
+  border: 1px solid #ccc;
+  border-radius: 0.2em 0 0  0.2em;
+}
+.searchbar .searchbtn{
+  width: 1.6em;
+  height: 1.4em;
+  text-align: center;
+  border:1px solid #ccc;
+  border-left: none;
+  border-radius: 0 0.2em 0.2em 0;
+}
+.searchbar .searchbtn icon{
+  margin-top:0.1em;
+}
+
+/*goods*/
+.goodswrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.goodswrap .menu{
+  width:5em;
+  font-size:0.8em;
+  color: #666;
+}
+.goodswrap .menu .menu-item{
+  padding: 0.8em 1em;
+  background: #F4F5F7;
+  position: relative;
+}
+.goodswrap .menu .menu-item:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background: #eee;
+  transform: scaleY(0.5);
+}
+.goodswrap .menu .menu-item:last-child{
+  border-bottom: none;
+}
+.goodswrap .goods{
+  flex: 1;
+  position: relative;
+}
+.goodswrap .goods:after{
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background: #eee;
+  transform: scaleX(0.5);
+}
+.goodswrap .goods .box .typename{
+  display:block;
+  border-left:0.18em solid #1BAB43;
+  padding:0.4em 0.8em;
+  margin-bottom:0.2em;
+  color:#333;
+  font-size:0.85em;
+  background: #F4F5F7;
+}
+.goodswrap .goods .box .good{
+  padding:0.4em;
+  display: flex;
+  position: relative;
+}
+.goodswrap .goods .box .good:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background: #eee;
+  transform: scaleY(0.5);
+}
+.goodswrap .goods .box .good image{
+  width:5em;
+  height: 5em;
+  display: inline-block;
+  margin-right: 0.4em;
+}
+.goodswrap .goods .box .good .desc{
+  flex:1;
+}
+.goodswrap .goods .box .good .desc .title{
+  display: block;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0.3em 0;
+  color:#333;
+}
+.goodswrap .goods .box .good .desc .sales{
+  font-size: 0.7em;
+  color:#666;
+  margin-bottom: 0.2em;
+}
+.goodswrap .goods .box .good .desc .price{
+  font-size: 0.8em;
+  color:#EF0A11;
+  font-weight: 600;
+}
+.goodswrap .goods .box .good .desc .price label{
+  font-size: 1.2em;
+}

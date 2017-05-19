@@ -1,0 +1,35 @@
+<!--pages/store/store.wxml-->
+<view class="container">
+  <!--searchwrap-->
+  <view class="searchwrap">
+    <view class="searchbar">
+      <input type="text"/>
+      <view class="searchbtn">
+        <icon class="" type="search" size="18" color="rgb(0,255,255)"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!--content-->
+  <view class="goodswrap">
+    <view class="menu">
+      <view class="menu-item" wx:for="{{menu}}" wx:key="">
+        {{item}}
+      </view>
+    </view>
+    <view class="goods">
+      <view class="box" wx:for="{{allGoods}}" wx:key="">
+        <label class="typename">{{item.type}}</label>
+        <view class="good" wx:for="{{item.goods}}" wx:for-item="good" wx:key="">
+          <image src="{{good.logo}}"/>
+          <view class="desc">
+            <label class="title">{{good.name}}</label>
+            <view class="sales">月售{{good.sale}} 好评率{{good.rate}}</view>
+            <view class="price">¥ <label class="nowprice">{{good.nowPrice}}</label> </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

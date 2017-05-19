@@ -1,0 +1,35 @@
+/* pages/comment/comment.wxss */
+page{
+  background: #F3F3F3;
+}
+.title{
+  width: 94%;
+  display: block;
+  margin: 0.8em auto;
+  font-size: 0.9em;
+  color: #333;
+}
+.textwrap{
+  width: 100%;
+  background: #fff;
+}
+textarea{
+  width: 94%;
+  margin: 0.8em auto;
+  height: 8em;
+  font-size: 0.8em;
+  color: #333;
+  background: #fff;
+}
+.btn{
+  width: 100%;
+  padding: 0.6em
+}
+.btn button{
+  color: #9AE599;
+  font-size: 1em;
+  width: 94%;
+}
+.btn button.valid{
+  color: #fff;
+}

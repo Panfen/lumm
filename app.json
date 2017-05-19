@@ -2,7 +2,11 @@
   "pages":[
     "pages/index/index",
     "pages/circle/circle",
-    "pages/forum/forum"
+    "pages/forum/forum",
+    "pages/store/store",
+    "pages/topic/topic",
+    "pages/article/article",
+    "pages/comment/comment"
   ],
   "window":{
     "backgroundTextStyle":"light",

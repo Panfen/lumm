@@ -1,0 +1,14 @@
+<!--pages/article/article.wxml-->
+<view class="container">
+  <label class="title">{{title}}</label>
+  <label class="author">千山慕雪 {{time}}</label>
+  <view class="imgwrap">
+    <image src="{{cover}}"></image>
+  </view>
+  <text class="content">{{content}}</text>
+  <view class="ctrlbar">
+    <view>Views {{view}}  Like {{like}}</view>
+    <view>Report</view>
+  </view>
+</view>
+

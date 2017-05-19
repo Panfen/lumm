@@ -1,0 +1,10 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+  <label class="title">{{title}}</label>
+  <view class="textwrap">
+    <textarea placeholder="Say something you like..."  bindinput="bindKeyInput"></textarea>
+  </view>
+  <view class="btn">
+    <button type="primary" size="default" bindtap="submitAct" class="{{valid}}"> Submit </button>
+  </view>
+</view>

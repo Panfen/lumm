@@ -3,26 +3,43 @@
   <view class="areaw-outwrap">
     <view class="areawrap-innerwrap">
       <view class="area" wx:for="{{areas1}}">
-        <label>{{item.title}}</label>
-        <image src="{{item.img}}" mode="scaleToFill"></image>
+        <navigator url="/pages/store/store">
+          <view class="textwrap">
+            <label>{{item.title}}</label>
+          </view>
+          <image src="{{item.img}}" mode="scaleToFill"></image>
+        </navigator>
       </view>
     </view>
     <view class="areawrap-innerwrap">
       <view class="area" wx:for="{{areas2}}">
-        <label>{{item.title}}</label>
-        <image src="{{item.img}}" mode="scaleToFill"></image>
+        <navigator url="/pages/store/store">
+          <view class="textwrap">
+            <label>{{item.title}}</label>
+          </view>
+          <image src="{{item.img}}" mode="scaleToFill"></image>
+        </navigator>
       </view>
     </view>
   </view>
 
   <view class="topicwrap">
-    <view class="topic" wx:for="{{topics}}" wx:key=""> 
-      <image src="{{item.img}}"></image>
-      <view class="content">
-        <label class="title">{{item.title}}</label>
-        <label class="desc">{{item.desc}}</label>
-        <view class="ctrbar"></view>
-      </view>
+    <view wx:for="{{topics}}" wx:key="">
+      <navigator url="/pages/topic/topic?title={{item.title}}&desc={{item.desc}}&img={{item.img}}&id={{index}}" class="topic">
+        <image src="{{item.img}}"></image>
+        <view class="content">
+          <label class="title">{{item.title}}</label>
+          <view class="desc">{{item.desc}}</view>
+          <view class="ctrlbar">
+            <view class="iconfont icon-tuijian">
+              <label>{{item.star}}</label>
+            </view>
+            <view class="iconfont icon-pinglun">
+              <label>{{item.remark}}</label>
+            </view>
+          </view>
+        </view>
+      </navigator>
     </view>
   </view>
 </view>

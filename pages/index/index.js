@@ -7,7 +7,7 @@ Page({
     ],
     content:[
       {
-        title:'长期吸猫有什么不良反应?',
+        title:'长期吸猫有什么不良反应',
         cover:'../../images/pages/item1.jpg',
         desc:'一日吸猫，终生想吸！这玩意儿可比鸦片厉害多了!'
       },

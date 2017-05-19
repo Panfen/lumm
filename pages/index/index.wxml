@@ -3,16 +3,20 @@
   <swiper indicator-dots="true"
     autoplay="true" interval="4000" duration="1000">
     <block wx:for="{{imgUrls}}">
+      <navigator url="/pages/article/article?cover={{item}}&id={{index+3}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image"  mode="scaleToFill"/>
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
       </swiper-item>
+      </navigator>
     </block>
   </swiper>
-  <view class="content-wrap" wx:for="{{content}}" wx:key="">
-    <view class="content-item">
-     <label class="title">{{item.title}}</label>
-     <image src="{{item.cover}}"></image>
-     <label class="desc">{{item.desc}}</label>
-    </view>
+  <view class="content-wrap" wx:for="{{content}}" wx:key="" >
+    <navigator url="/pages/article/article?title={{item.title}}&cover={{item.cover}}&id={{index}}">
+      <view class="content-item">
+      <label class="title">{{item.title}}</label>
+      <image src="{{item.cover}}"></image>
+      <label class="desc">{{item.desc}}</label>
+      </view> 
+    </navigator>
   </view>
 </view>
