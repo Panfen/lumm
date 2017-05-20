@@ -2,7 +2,7 @@
 <view class="container">
   <view class="areaw-outwrap">
     <view class="areawrap-innerwrap">
-      <view class="area" wx:for="{{areas1}}">
+      <view class="area" wx:for="{{areas1}}" wx:key="unique">
         <navigator url="/pages/store/store">
           <view class="textwrap">
             <label>{{item.title}}</label>
@@ -12,7 +12,7 @@
       </view>
     </view>
     <view class="areawrap-innerwrap">
-      <view class="area" wx:for="{{areas2}}">
+      <view class="area" wx:for="{{areas2}}" wx:key="unique">
         <navigator url="/pages/store/store">
           <view class="textwrap">
             <label>{{item.title}}</label>
@@ -24,7 +24,7 @@
   </view>
 
   <view class="topicwrap">
-    <view wx:for="{{topics}}" wx:key="">
+    <view wx:for="{{topics}}" wx:key="unique">
       <navigator url="/pages/topic/topic?title={{item.title}}&desc={{item.desc}}&img={{item.img}}&id={{index}}" class="topic">
         <image src="{{item.img}}"></image>
         <view class="content">

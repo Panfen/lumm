@@ -11,7 +11,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "WeCat",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -19,11 +19,11 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "喵院"
+        "text": "喵语"
       },
       {
         "pagePath": "pages/forum/forum",
-        "text": "喵语"
+        "text": "喵院"
       },
       {
         "pagePath": "pages/circle/circle",

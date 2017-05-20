@@ -17,7 +17,7 @@
     <view class="comment">
     <navigator url="/pages/comment/comment?title={{title}}">Write a comment</navigator>
     </view>
-    <view class="remark" wx:for="{{remarks}}" wx:key="">
+    <view class="remark" wx:for="{{remarks}}" wx:key="unique">
       <image src="{{item.avatar}}"></image>
       <view class="main">
         <label class="username">{{item.username}}</label>

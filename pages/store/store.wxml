@@ -1,26 +1,28 @@
 <!--pages/store/store.wxml-->
 <view class="container">
   <!--searchwrap-->
-  <view class="searchwrap">
+  <!--view class="searchwrap">
     <view class="searchbar">
       <input type="text"/>
       <view class="searchbtn">
         <icon class="" type="search" size="18" color="rgb(0,255,255)"></icon>
       </view>
     </view>
-  </view>
+
+    <view class="line"></view>
+  </view-->
 
   <!--content-->
   <view class="goodswrap">
-    <view class="menu">
-      <view class="menu-item" wx:for="{{menu}}" wx:key="">
+    <scroll-view scroll-y style="height:29em" class="menu">
+      <view class="menu-item {{index === scrollNum ? 'selected':''}}" wx:for="{{menu}}" wx:key="unique" bindtap="selectMenuAct" data-id="{{index}}">
         {{item}}
       </view>
-    </view>
-    <view class="goods">
-      <view class="box" wx:for="{{allGoods}}" wx:key="">
+    </scroll-view>
+    <scroll-view scroll-y style="height: 31.5em" class="goods" bindscroll="goodsScrollAct" scroll-top="{{scrollTop}}">
+      <view class="box" wx:for="{{allGoods}}" wx:key="unique">
         <label class="typename">{{item.type}}</label>
-        <view class="good" wx:for="{{item.goods}}" wx:for-item="good" wx:key="">
+        <view class="good" wx:for="{{item.goods}}" wx:for-item="good" wx:key="unique">
           <image src="{{good.logo}}"/>
           <view class="desc">
             <label class="title">{{good.name}}</label>
@@ -29,7 +31,7 @@
           </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 
 </view>
