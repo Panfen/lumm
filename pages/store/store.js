@@ -164,7 +164,7 @@ Page({
     ],
     scrollNum:0,
     scrollTop:0,
-    heightList : [0, 400, 806, 1020, 9000]
+    heightList : [0, 405, 809, 1028, 9000]
   },
   goodsScrollAct:function(e){
     for (var i = 0; i < this.data.heightList.length; i++){

@@ -79,6 +79,7 @@
   color:#666;
   height: 3.2em;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .topicwrap .topic .content .ctrlbar{
