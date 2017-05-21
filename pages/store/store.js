@@ -168,7 +168,6 @@ Page({
   },
   goodsScrollAct:function(e){
     for (var i = 0; i < this.data.heightList.length; i++){
-      console.log(e.detail.scrollTop)
       if (e.detail.scrollTop >= this.data.heightList[i] && e.detail.scrollTop < this.data.heightList[i+1]){
         this.setData({
           scrollNum:i
