@@ -3,7 +3,8 @@ Page({
   data: {
     title: '',
     valid:'',
-    comment:''
+    comment:'',
+    userInfo:''
   },
   onLoad: function (options) {
     this.setData({
@@ -24,12 +25,20 @@ Page({
     }
   },
   submitAct:function(){
+    var that = this;
     if(this.data.comment.length > 0){
       wx.showToast({
         title: 'succed!',
         icon: 'success',
         duration: 3000,
         success: function () {
+          wx.setStorage({
+            key: 'comment',
+            data: {
+              content: that.data.comment,
+              time: new Date().getTime()
+            }
+          })
           wx.navigateBack();
         }
       });
