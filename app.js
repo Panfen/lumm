@@ -1,10 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    this.getSysInfo();
   },
   getUserInfo:function(cb){
     var that = this
@@ -27,7 +24,24 @@ App({
       })
     }
   },
+  getSysInfo:function(){
+    var that = this;
+    if (that.globalData && that.globalData.sysInfo && that.globalData.sysInfo.windowHeight){
+      return that.globalData.sysInfo;
+    }
+    return wx.getSystemInfo({
+      success: function(res) {
+        that.globalData.sysInfo = res;
+        return res;
+      },
+      fail:function(){
+        return 'fail to get system info!'
+      }
+    })
+  },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    sysInfo:null,
+    hah:'hhahahah'
   }
 })

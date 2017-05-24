@@ -6,70 +6,24 @@ page{
   display: flex;
   flex-direction: column;
 }
-.searchwrap{
-  width: 100%;
-  position: fixed;
-  height: 2.3em;
-  z-index:100;
-  background: #F4F5F7;
-}
-.searchwrap .line{
-  width: 100%;
-  height: 1px;
-  background: #eee;
-  transform: scaleY(0,5);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.searchbar{
-  width: 94%;
-  margin:0.4em auto;
-  display: flex;
-  justify-content: row;
-}
-.searchbar input{
-  flex: 1;
-  padding-left: 0.4em;
-  height: 1.6em;
-  font-size: 0.8em;
-  color:#333;
-  border: 1px solid #ccc;
-  border-radius: 0.2em 0 0  0.2em;
-}
-.searchbar .searchbtn{
-  width: 1.6em;
-  height: 1.4em;
-  position: relative;
-  border:1px solid #ccc;
-  border-left: none;
-  border-radius: 0 0.2em 0.2em 0;
-}
-.searchbar .searchbtn icon{
-  position: absolute;
-  top: 0.1em;
-  left: 0.1em;
-  color: #666;
-  display: inline-block;
-}
 
 /*goods*/
 .goodswrap{
   width: 100%;
   height: 100%;
   display: flex;
-  /*margin-top: 2.3em;*/
   flex-direction: row;
 }
 .goodswrap .menu{
-  width:5em;
-  font-size:0.8em;
+  width:160rpx;
+  font-size:32rpx;
   color: #666;
   height: 100%;
   overflow-y: auto;
+  overflow-x:hidden;
 }
 .goodswrap .menu .menu-item{
-  padding: 0.8em 1em;
+  padding: 18rpx;
   background: #F4F5F7;
   position: relative;
 }
@@ -95,6 +49,7 @@ page{
   flex: 1;
   height: 100%;
   overflow-y:auto; 
+  overflow-x: hidden;
   position: relative;
 }
 .goodswrap .goods:after{
@@ -110,16 +65,26 @@ page{
 }
 .goodswrap .goods .box .typename{
   display:block;
-  border-left:0.18em solid #1BAB43;
-  padding:0.4em 0.8em;
-  margin-bottom:0.2em;
-  margin-left: -1px;
+  line-height: 72rpx;
+  padding:0rpx 20rpx;
   color:#333;
-  font-size:0.85em;
+  font-size: 32rpx;
   background: #F4F5F7;
+  position: relative;
+}
+.goodswrap .goods .box .typename:after{
+  content: "";
+  width: 6rpx;
+  height: 100%;
+  display: inline-block;
+  background: #1BAB43;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:10;
 }
 .goodswrap .goods .box .good{
-  padding:0.4em;
+  padding:14rpx;
   display: flex;
   position: relative;
 }
@@ -135,31 +100,31 @@ page{
   transform: scaleY(0.5);
 }
 .goodswrap .goods .box .good image{
-  width:5em;
-  height: 5em;
+  width: 170rpx;
+  height: 170rpx;
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 20rpx;
 }
 .goodswrap .goods .box .good .desc{
   flex:1;
 }
 .goodswrap .goods .box .good .desc .title{
   display: block;
-  font-size: 0.8em;
+  font-size: 30rpx;
   font-weight: 500;
-  margin: 0.3em 0;
+  margin: 10rpx 0;
   color:#333;
 }
 .goodswrap .goods .box .good .desc .sales{
-  font-size: 0.7em;
+  font-size: 28rpx;
   color:#666;
-  margin-bottom: 0.2em;
+  margin-bottom: 10rpx;
 }
 .goodswrap .goods .box .good .desc .price{
-  font-size: 0.8em;
+  font-size: 32rpx;
   color:#EF0A11;
   font-weight: 600;
 }
 .goodswrap .goods .box .good .desc .price label{
-  font-size: 1.2em;
+  font-size: 34rpx;
 }

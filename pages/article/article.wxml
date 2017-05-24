@@ -1,7 +1,10 @@
 <!--pages/article/article.wxml-->
 <view class="container">
   <label class="title">{{title}}</label>
-  <label class="author">千山慕雪 {{time}}</label>
+  <view class="info">
+    <label class="author">千山慕雪 {{time}}</label>
+    <label class="time">2017-05-24</label>
+  </view>
   <view class="imgwrap">
     <image src="{{cover}}"></image>
   </view>

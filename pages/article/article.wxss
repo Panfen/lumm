@@ -4,12 +4,16 @@ page{
 }
 .title{
   margin: 1em 0 0.2em 0;
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: #333;
 }
 .author{
   font-size: 0.8em;
-  color: #777;
+  color: #7C7B9B;
+}
+.time{
+  font-size:0.8em;
+  color:#8C8C8C; 
 }
 .imgwrap{
   width: 90%;
@@ -24,7 +28,7 @@ page{
 .content{
   width: 90%;
   color:#666;
-  font-size: 0.75em;
+  font-size: 0.8em;
   padding-bottom:2em;
 }
 .ctrlbar{

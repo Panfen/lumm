@@ -1,4 +1,5 @@
 // pages/store/store.js
+var app = getApp();
 Page({
   data:{
     menu:['猫粮','猫砂','猫砂盆','猫窝','猫玩具','猫工具'],
@@ -7,7 +8,7 @@ Page({
         type:'精品猫粮',
         goods:[
           {
-            name: 'whiskas伟嘉',
+            name: 'Whiskas伟嘉',
             logo: '../../images/pages/good1.jpg',
             sale: '126',
             rate: '95%',
@@ -167,6 +168,8 @@ Page({
     heightList : [0, 405, 809, 1028, 9000]
   },
   goodsScrollAct:function(e){
+    
+
     for (var i = 0; i < this.data.heightList.length; i++){
       if (e.detail.scrollTop >= this.data.heightList[i] && e.detail.scrollTop < this.data.heightList[i+1]){
         this.setData({
@@ -181,5 +184,16 @@ Page({
       scrollNum : id,
       scrollTop: this.data.heightList[id]
     });
+  },
+  onLoad:function(){
+    var TypeBarHeight = 72;
+    var GoodHeight = 198;
+
+    var typeCount = this.data.menu.length;
+    var goodsCount = 0
+    this.data.allGoods.forEach((item) => {
+      goodsCount += item.goods.length;
+    });
+    console.log(goodsCount)
   }
 })

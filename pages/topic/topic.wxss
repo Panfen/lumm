@@ -30,7 +30,7 @@
   color:#666;
   display: inline-block;
   text-align: left;
-  font-size: 0.75em;
+  font-size: 0.8em;
   padding-bottom: 1em;
 }
 .remarks{

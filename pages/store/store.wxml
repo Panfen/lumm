@@ -1,16 +1,5 @@
 <!--pages/store/store.wxml-->
 <view class="container">
-  <!--searchwrap-->
-  <!--view class="searchwrap">
-    <view class="searchbar">
-      <input type="text"/>
-      <view class="searchbtn">
-        <icon class="" type="search" size="18" color="rgb(0,255,255)"></icon>
-      </view>
-    </view>
-
-    <view class="line"></view>
-  </view-->
 
   <!--content-->
   <view class="goodswrap">
