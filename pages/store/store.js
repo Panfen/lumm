@@ -165,10 +165,23 @@ Page({
     ],
     scrollNum:0,
     scrollTop:0,
-    heightList : [0, 405, 809, 1028, 9000]
+    heightList : [0, 405, 809, 1028, 9000],
+    rate: 198/72,
   },
   goodsScrollAct:function(e){
+    var typeCount = this.data.menu.length;
+    var goodsCount = 0
+    this.data.allGoods.forEach((item) => {
+      goodsCount += item.goods.length;
+    });
+
     
+    var barHeight = Math.ceil(e.detail.scrollHeight / (typeCount + goodsCount * this.data.rate));
+    var goodHeight = Math.ceil(barHeight * this.data.rate)
+    
+    console.log(barHeight)
+    console.log(goodHeight)
+
 
     for (var i = 0; i < this.data.heightList.length; i++){
       if (e.detail.scrollTop >= this.data.heightList[i] && e.detail.scrollTop < this.data.heightList[i+1]){
@@ -186,14 +199,6 @@ Page({
     });
   },
   onLoad:function(){
-    var TypeBarHeight = 72;
-    var GoodHeight = 198;
 
-    var typeCount = this.data.menu.length;
-    var goodsCount = 0
-    this.data.allGoods.forEach((item) => {
-      goodsCount += item.goods.length;
-    });
-    console.log(goodsCount)
   }
 })
