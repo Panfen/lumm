@@ -120,11 +120,47 @@ page{
   color:#666;
   margin-bottom: 10rpx;
 }
-.goodswrap .goods .box .good .desc .price{
+.goodswrap .goods .box .good .desc .priceact{
+  display: flex;
+  justify-content: space-between;
+}
+.goodswrap .goods .box .good .desc .priceact .price{
   font-size: 32rpx;
   color:#EF0A11;
   font-weight: 600;
 }
-.goodswrap .goods .box .good .desc .price label{
+.goodswrap .goods .box .good .desc .priceact .price label{
   font-size: 34rpx;
+}
+.goodswrap .goods .box .good .desc .priceact .act{
+  margin-right: 30rpx;
+}
+.goodswrap .goods .box .good .desc .priceact .act .btn{
+  width: 34rpx;
+  height: 34rpx;
+  display: inline-block;
+  border-radius: 23rpx;
+  text-align: center;
+  line-height: 34rpx;
+  font-weight: 700;
+  border: 6rpx solid #00A0DC;
+}
+.goodswrap .goods .box .good .desc .priceact .act .btn.decrease{
+  color: #00A0DC;
+}
+.goodswrap .goods .box .good .desc .priceact .act .btn.increase{
+  color: #fff;
+  background: #00A0DC;
+}
+.goodswrap .goods .box .good .desc .priceact .act .count{
+  color: #93989E;
+  font-size: 24rpx;
+  vertical-align: middle;
+  width: 40rpx;
+  line-height: 22rpx;
+  text-align: center;
+  display: inline-block;
+}
+.goodswrap .goods .box .good .desc .priceact .act label.hidden{
+  display:none;
 }

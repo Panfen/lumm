@@ -1,0 +1,69 @@
+<!--pages/good/good.wxml-->
+<!--index.wxml-->
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">详情</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">评价</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 34}}px" bindchange="bindChange">
+    
+    <!-- 商品 -->
+    <swiper-item>
+      <view class="good">
+        <swiper indicator-dots="false" autoplay="false" bindchange="swiperPicAct">
+          <block wx:for="{{imgList}}" wx:key="unique">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+            </swiper-item>
+          </block>
+          <label class="num">{{currentPic}}/{{totalPic}}</label>
+        </swiper>
+        <view class="infowrap">
+          <label class="title">洁客(Drymax)薰衣草香 水晶猫砂4L</label>
+          <view class="pricewrap">
+            <view class="price">¥ <label>27</label> .00</view>
+          </view>
+          <view class="activity clo">
+            <label class="text">活动</label>
+            <view class="list">
+              <view class="item"><label class="type">满减</label>满199减10,满299减25</view>
+              <view class="item"><label class="type">会员</label>会员85折</view>
+            </view>
+          </view>
+          <view class="selected clo">
+            <label class="text">已选</label>
+            <view class="list">
+              <view class="item">水晶砂 1件</view>
+              <view class="item">素白砂 1件</view>
+            </view>
+          </view>
+          <view class="address clo">
+            <label class="text">地址</label>
+            <view class="list">
+              杭州市西湖区留和路288号
+            </view>
+          </view>
+
+          <view class="cartwrap">
+            <view>店铺</view>
+            <view>关注</view>
+            <view>分享</view>
+            <view>购物车</view>
+            <label class="addCart">加入购物车</label>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <!-- 详情 -->
+    <swiper-item>
+      <view class="detail">我是呵呵</view>
+    </swiper-item>
+
+    <!-- 评价 -->
+    <swiper-item>
+      <view class="remark">我是嘿嘿</view>
+    </swiper-item>
+
+</swiper>

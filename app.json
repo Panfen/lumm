@@ -6,7 +6,8 @@
     "pages/store/store",
     "pages/topic/topic",
     "pages/article/article",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/good/good"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,177 @@
+/* pages/good/good.wxss */
+page{
+  background: #F1F2F6;
+}
+.swiper-tab{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  line-height: 34px;
+}
+.swiper-tab:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background: #ccc;
+  transform: scaleY(0.5);
+}
+.swiper-tab-list{
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+  position: relative;
+}
+.swiper-tab-list.on{
+  font-size: 32rpx;
+  color:#333;
+}
+.swiper-tab-list.on:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4rpx;
+  background: #1BAB43;
+  position: absolute;
+  bottom: -2rpx;
+  left: 0;
+}
+.swiper-box{
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*good*/
+.good{
+  height: 100%;
+}
+.good swiper{
+  height:420rpx;
+  position: relative;
+}
+.good swiper image{
+  width:100%;
+  height:100%;
+}
+.good swiper .num{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  position:absolute;
+  bottom:40rpx;
+  right:40rpx;
+  z-index:1000;
+  color:#fff;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  background: rgba(30, 30, 30, 0.2)
+}
+.good .infowrap{
+  width: 100%;
+  font-size: 30rpx;
+  text-align: left;
+}
+.good .infowrap .title{
+  font-size: 32rpx;
+  padding: 30rpx 30rpx 10rpx 30rpx;
+  display: block;
+  background: #fff;
+}
+.good .infowrap .pricewrap{
+  padding:10rpx 30rpx;
+  background: #fff;
+}
+.good .infowrap .pricewrap .price{
+  color: #EF0A11;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+.good .infowrap .pricewrap .price:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  background: #eee;
+  transform: scaleY(0.5);
+}
+.good .infowrap .price label{
+  font-size: 32rpx;
+}
+.good .infowrap .clo{
+  display: flex;
+  padding: 30rpx;
+  background: #fff;
+}
+.good .infowrap .clo .text{
+  width: 80rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.good .infowrap .clo .list{
+  flex: 1;
+}
+.good .infowrap .clo .list .item{
+  margin-bottom: 6rpx;
+}
+.good .infowrap .activity .list .item .type{
+  padding: 2rpx 4rpx;
+  border:1rpx solid #EF0A11;
+  border-radius: 6rpx;
+  color:#EF0A11;
+  font-size: 22rpx;
+  margin-right: 16rpx;
+  vertical-align: middle;
+}
+.good .infowrap .selected{
+  margin: 8rpx 0;
+}
+.good .infowrap .selected:after,.good .infowrap .selected:before{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  background: #ccc;
+  transform: scaleY(0.5);
+}
+.good .infowrap .selected:after{
+  bottom: 0;
+}
+.good .infowrap .selected:before{
+  top: 0;
+}
+.good .infowrap .cartwrap{
+  width: 100%;
+  display: flex;
+  line-height: 90rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-top: 1rpx solid #ccc;
+}
+.good .infowrap .cartwrap view{
+  width: 100rpx;
+}
+.good .infowrap .cartwrap .addCart{
+  display: inline-block;
+  flex: 1;
+  color: #fff;
+  font-size: 32rpx;
+  background: #EF0A11;
+}

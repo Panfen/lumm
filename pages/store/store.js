@@ -13,7 +13,8 @@ Page({
             sale: '126',
             rate: '95%',
             oldPrice: '65',
-            nowPrice: '58'
+            nowPrice: '58',
+            goodCount: 0
           },
           {
             name: 'DDTRA-PET',
@@ -21,7 +22,8 @@ Page({
             sale: '469',
             rate: '99%',
             oldPrice: '128',
-            nowPrice: '99'
+            nowPrice: '99',
+            goodCount: 0
           },
           {
             name: 'Friskies猫食',
@@ -29,7 +31,8 @@ Page({
             sale: '168',
             rate: '97%',
             oldPrice: '169',
-            nowPrice: '159'
+            nowPrice: '159',
+            goodCount: 0
           },
           {
             name: 'MUGGLES 麻瓜',
@@ -37,7 +40,8 @@ Page({
             sale: '332',
             rate: '98%',
             oldPrice: '96',
-            nowPrice: '88'
+            nowPrice: '88',
+            goodCount: 0
           }
         ]
       },
@@ -50,7 +54,8 @@ Page({
             sale: '78',
             rate: '96%',
             oldPrice: '34',
-            nowPrice: '32'
+            nowPrice: '32',
+            goodCount: 0
           },
           {
             name: '乐洁love clear',
@@ -58,7 +63,8 @@ Page({
             sale: '173',
             rate: '98%',
             oldPrice: '29',
-            nowPrice: '27'
+            nowPrice: '27',
+            goodCount: 0
           },
           {
             name: '洁珊',
@@ -66,7 +72,8 @@ Page({
             sale: '45',
             rate: '95%',
             oldPrice: '65',
-            nowPrice: '48'
+            nowPrice: '48',
+            goodCount: 0
           },
           {
             name: '固态无臭Ag+',
@@ -74,7 +81,8 @@ Page({
             sale: '89',
             rate: '98%',
             oldPrice: '86',
-            nowPrice: '78'
+            nowPrice: '78',
+            goodCount: 0
           },
         ]
       },
@@ -87,7 +95,8 @@ Page({
             sale: '99',
             rate: '95%',
             oldPrice: '65',
-            nowPrice: '56'
+            nowPrice: '56',
+            goodCount: 0
           },
           {
             name: 'Ag+抗菌猫砂盆',
@@ -95,7 +104,8 @@ Page({
             sale: '99',
             rate: '95%',
             oldPrice: '132',
-            nowPrice: '112'
+            nowPrice: '112',
+            goodCount: 0
           }
         ]
       },
@@ -108,7 +118,8 @@ Page({
             sale: '78',
             rate: '96%',
             oldPrice: '69',
-            nowPrice: '69'
+            nowPrice: '69',
+            goodCount: 0
           },
           {
             name: '绒球疯狂石头之蒙古包',
@@ -116,7 +127,8 @@ Page({
             sale: '103',
             rate: '98%',
             oldPrice: '89',
-            nowPrice: '69'
+            nowPrice: '69',
+            goodCount: 0
           }
         ]
       },
@@ -129,7 +141,8 @@ Page({
             sale: '23',
             rate: '98%',
             oldPrice: '20',
-            nowPrice: '16'
+            nowPrice: '16',
+            goodCount: 0
           },
           {
             name: 'Rakuten游乐转不停',
@@ -137,7 +150,8 @@ Page({
             sale: '420',
             rate: '99%',
             oldPrice: '66',
-            nowPrice: '56'
+            nowPrice: '56',
+            goodCount: 0
           }
         ]
       },
@@ -150,7 +164,8 @@ Page({
             sale: '83',
             rate: '98%',
             oldPrice: '43',
-            nowPrice: '29'
+            nowPrice: '29',
+            goodCount: 0
           },
           {
             name: '金多乐美毛刷',
@@ -158,7 +173,8 @@ Page({
             sale: '77',
             rate: '95%',
             oldPrice: '29',
-            nowPrice: '29'
+            nowPrice: '29',
+            goodCount: 0
           }
         ]
       }
@@ -167,7 +183,7 @@ Page({
     scrollTop:0,
     heightList : [0, 405, 809, 1028, 9000],
     typeHeight:198,
-    goodHeight:72,
+    goodHeight:72
   },
   goodsScrollAct:function(e){
     var typeCount = this.data.menu.length;
@@ -194,11 +210,27 @@ Page({
       }
     }
   },
-  selectMenuAct:function(e){
+  selectMenuAct: function (e) {
     var id = e.target.dataset.id;
     this.setData({
-      scrollNum : id,
+      scrollNum: id,
       scrollTop: this.data.heightList[id]
     });
   },
+  increaseAct:function(e){
+    var goodid = e.currentTarget.dataset.goodid;
+    var typeid = e.currentTarget.dataset.typeid;
+    this.data.allGoods[typeid].goods[goodid].goodCount++;
+    this.setData({
+      allGoods: this.data.allGoods
+    });
+  },
+  decreaseAct:function(e){
+    var goodid = e.currentTarget.dataset.goodid;
+    var typeid = e.currentTarget.dataset.typeid;
+    this.data.allGoods[typeid].goods[goodid].goodCount--;
+    this.setData({
+      allGoods: this.data.allGoods
+    });
+  }
 })

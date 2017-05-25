@@ -9,15 +9,26 @@
       </view>
     </scroll-view>
     <scroll-view scroll-y style="height: 31.5em" class="goods" bindscroll="goodsScrollAct" scroll-top="{{scrollTop}}">
-      <view class="box" wx:for="{{allGoods}}" wx:key="unique">
+      <view class="box" wx:for="{{allGoods}}" wx:key="unique" wx:for-index="typeId">
         <label class="typename">{{item.type}}</label>
-        <view class="good" wx:for="{{item.goods}}" wx:for-item="good" wx:key="unique">
-          <image src="{{good.logo}}"/>
-          <view class="desc">
-            <label class="title">{{good.name}}</label>
-            <view class="sales">月售{{good.sale}} 好评率{{good.rate}}</view>
-            <view class="price">¥ <label class="nowprice">{{good.nowPrice}}</label> </view>
-          </view>
+        <view wx:for="{{item.goods}}" wx:for-item="good" wx:key="unique" wx:for-index="goodId">
+          <navigator class="good" url="/pages/good/good?typeid={{typeId}}&goodid={{goodId}}">
+            <image src="{{good.logo}}"/>
+            <view class="desc">
+              <label class="title">{{good.name}}</label>
+              <view class="sales">月售{{good.sale}}  好评率{{good.rate}}</view>
+              <view class="priceact">
+                <view class="price">
+                  ¥ <label class="nowprice">{{good.nowPrice}}</label>
+                </view>
+                <!--view class="act">
+                  <label class="decrease btn {{good.goodCount>0 ? '' : 'hidden'}}" bindtap="decreaseAct" data-typeId="{{typeId}}" data-goodId="{{goodId}}">-</label>
+                  <label class="count {{good.goodCount>0 ? '' : 'hidden'}}">{{good.goodCount}}</label>
+                  <label class="increase btn" bindtap="increaseAct" data-typeid="{{typeId}}" data-goodid="{{goodId}}">+</label>
+                </view-->
+              </view>
+            </view>
+          </navigator>
         </view>
       </view>
     </scroll-view>
