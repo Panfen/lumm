@@ -3,9 +3,12 @@ var app = getApp();
 Page({
   data:{
     menu:['猫粮','猫砂','猫砂盆','猫窝','猫玩具','猫工具'],
+    menuType: ['food', 'dust', 'bowl', 'cages', 'toys', 'tools'],
+    toView: 'food',
     allGoods:[
       {
-        type:'精品猫粮',
+        type: '精品猫粮',
+        viewId: 'food',
         goods:[
           {
             name: 'Whiskas伟嘉',
@@ -46,7 +49,8 @@ Page({
         ]
       },
       {
-        type:'无臭猫砂',
+        type: '无臭猫砂',
+        viewId: 'dust',
         goods:[
           {
             name: '喵嗞固态',
@@ -87,7 +91,8 @@ Page({
         ]
       },
       {
-        type:'猫砂盆',
+        type: '猫砂盆',
+        viewId: 'bowl',
         goods:[
           {
             name: '小清新猫砂盆',
@@ -111,6 +116,7 @@ Page({
       },
       {
         type: '猫窝',
+        viewId: 'cages',
         goods: [
           {
             name: '舒慕高档宠物棉窝',
@@ -134,6 +140,7 @@ Page({
       },
       {
         type: '猫玩具',
+        viewId: 'toys',
         goods: [
           {
             name: '两孔剑麻羽毛球',
@@ -157,6 +164,7 @@ Page({
       },
       {
         type: '猫工具',
+        viewId: 'tools',
         goods: [
           {
             name: '宠百思美毛全面圆头针梳',
@@ -212,9 +220,12 @@ Page({
   },
   selectMenuAct: function (e) {
     var id = e.target.dataset.id;
+    console.log(id)
+    var tType = this.data.menuType[id];
     this.setData({
       scrollNum: id,
-      scrollTop: this.data.heightList[id]
+      toView: tType
+      // scrollTop: this.data.heightList[id]
     });
   },
   increaseAct:function(e){

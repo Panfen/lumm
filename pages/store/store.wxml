@@ -3,13 +3,13 @@
 
   <!--content-->
   <view class="goodswrap">
-    <scroll-view scroll-y style="height:29em" class="menu">
-      <view class="menu-item {{index === scrollNum ? 'selected':''}}" wx:for="{{menu}}" wx:key="unique" bindtap="selectMenuAct" data-id="{{index}}">
+    <scroll-view scroll-y style="height:20em" class="menu">
+      <view class="menu-item {{index == scrollNum ? 'selected':''}}" wx:for="{{menu}}" wx:key="unique" bindtap="selectMenuAct" data-id="{{index}}">
         {{item}}
       </view>
     </scroll-view>
-    <scroll-view scroll-y style="height: 31.5em" class="goods" bindscroll="goodsScrollAct" scroll-top="{{scrollTop}}">
-      <view class="box" wx:for="{{allGoods}}" wx:key="unique" wx:for-index="typeId">
+    <scroll-view scroll-y style="height: 31.5em" class="goods" bindscroll="goodsScrollAct" scroll-top="{{scrollTop}}" scroll-into-view="{{toView}}">
+      <view class="box" id="{{item.viewId}}" wx:for="{{allGoods}}" wx:key="unique" wx:for-index="typeId">
         <label class="typename">{{item.type}}</label>
         <view wx:for="{{item.goods}}" wx:for-item="good" wx:key="unique" wx:for-index="goodId">
           <navigator class="good" url="/pages/good/good?typeid={{typeId}}&goodid={{goodId}}">
@@ -33,5 +33,4 @@
       </view>
     </scroll-view>
   </view>
-
 </view>
