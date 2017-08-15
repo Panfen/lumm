@@ -189,27 +189,22 @@ Page({
     ],
     scrollNum:0,
     scrollTop:0,
-    heightList : [0, 388, 776, 988, 9000],
-    typeHeight:198,
-    goodHeight:72
+    typeHeight:36,
+    goodHeight:88
   },
   goodsScrollAct:function(e){
-    // 36 88
-    console.log(e.detail.scrollTop)
     var typeCount = this.data.menu.length;
     var goodsCount = 0
     this.data.allGoods.forEach((item) => {
       goodsCount += item.goods.length;
     });
-
-    var barHeight = Math.ceil(e.detail.scrollHeight / (typeCount + goodsCount * (this.data.typeHeight / this.data.goodHeight)));
-    var goodHeight = Math.ceil(barHeight * (this.data.typeHeight / this.data.goodHeight))
     
     var heightList = [0];
     var curHeight = 0;
     this.data.allGoods.forEach((item) => {
-      curHeight += (barHeight + item.goods.length * goodHeight);
+      curHeight += (this.data.typeHeight + item.goods.length * this.data.goodHeight);
       heightList.push(curHeight);
+      console.log(heightList)
     });
 
     for (var i = 0; i < heightList.length; i++){
@@ -226,7 +221,6 @@ Page({
     this.setData({
       scrollNum: id,
       toView: tType
-      // scrollTop: this.data.heightList[id]
     });
   },
   increaseAct:function(e){
