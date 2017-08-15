@@ -189,11 +189,13 @@ Page({
     ],
     scrollNum:0,
     scrollTop:0,
-    heightList : [0, 405, 809, 1028, 9000],
+    heightList : [0, 388, 776, 988, 9000],
     typeHeight:198,
     goodHeight:72
   },
   goodsScrollAct:function(e){
+    // 36 88
+    console.log(e.detail.scrollTop)
     var typeCount = this.data.menu.length;
     var goodsCount = 0
     this.data.allGoods.forEach((item) => {
@@ -220,7 +222,6 @@ Page({
   },
   selectMenuAct: function (e) {
     var id = e.target.dataset.id;
-    console.log(id)
     var tType = this.data.menuType[id];
     this.setData({
       scrollNum: id,

@@ -85,7 +85,7 @@ page{
   z-index:10;
 }
 .goodswrap .goods .box .good{
-  padding: 0.46em;
+  padding: 0.5em;
   display: flex;
   position: relative;
 }
@@ -101,8 +101,8 @@ page{
   transform: scaleY(0.5);
 }
 .goodswrap .goods .box .good image{
-  width: 4.6em;
-  height: 4.6em;
+  width: 4.5em;
+  height: 4.5em;
   display: inline-block;
   margin-right: 0.7em;
 }
