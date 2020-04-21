@@ -1,45 +1,6 @@
-<!--pages/forum/forum.wxml-->
 <view class="container">
   <view class="areaw-outwrap">
-    <view class="areawrap-innerwrap">
-      <view class="area" wx:for="{{areas1}}" wx:key="unique">
-        <navigator url="/pages/store/store">
-          <view class="textwrap">
-            <label>{{item.title}}</label>
-          </view>
-          <image src="{{item.img}}" mode="scaleToFill"></image>
-        </navigator>
-      </view>
-    </view>
-    <view class="areawrap-innerwrap">
-      <view class="area" wx:for="{{areas2}}" wx:key="unique">
-        <navigator url="/pages/store/store">
-          <view class="textwrap">
-            <label>{{item.title}}</label>
-          </view>
-          <image src="{{item.img}}" mode="scaleToFill"></image>
-        </navigator>
-      </view>
-    </view>
+    hahah
   </view>
 
-  <view class="topicwrap">
-    <view wx:for="{{topics}}" wx:key="unique">
-      <navigator url="/pages/topic/topic?title={{item.title}}&desc={{item.desc}}&img={{item.img}}&id={{index}}" class="topic">
-        <image src="{{item.img}}"></image>
-        <view class="content">
-          <label class="title">{{item.title}}</label>
-          <view class="desc">{{item.desc}}</view>
-          <view class="ctrlbar">
-            <view class="iconfont icon-tuijian">
-              <label>{{item.star}}</label>
-            </view>
-            <view class="iconfont icon-pinglun">
-              <label>{{item.remark}}</label>
-            </view>
-          </view>
-        </view>
-      </navigator>
-    </view>
-  </view>
 </view>
