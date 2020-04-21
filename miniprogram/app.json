@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/circle/circle",
     "pages/forum/forum",
-    "pages/article/article",
+    "pages/article/article"
   ],
   "window": {
     "backgroundTextStyle": "light",

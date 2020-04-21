@@ -5,7 +5,7 @@ Page({
 
   },
 
-  onLoad: async function(options) {
+  onLoad: function(options) {
     this.getData()
   },
 

@@ -1,6 +1,29 @@
 <view class="container">
-  <view class="areaw-outwrap">
-    hahah
+  <view class="filter-wrap">
+    <button size="mini" class="{{currentType === '0' ? 'select' : ''}}" data-type="0" bindtap="onChangeType">全部</button>
+    <button size="mini" class="{{currentType === '1' ? 'select' : ''}}"  data-type="1" bindtap="onChangeType">日常</button>
+    <button size="mini" class="{{currentType === '2' ? 'select' : ''}}"  data-type="2" bindtap="onChangeType">交友</button>
+    <button size="mini" class="{{currentType === '3' ? 'select' : ''}}"  data-type="3" bindtap="onChangeType">LOST</button>
+    <button size="mini" class="{{currentType === '4' ? 'select' : ''}}"  data-type="4" bindtap="onChangeType">出售</button>
   </view>
+
+  <view class="forumlist" wx:for="{{list}}" wx:key="unique">
+  	<view class="forumitem">
+  		<view class="avatar">
+  			<image src="{{item.avatar}}"/>
+  		</view>
+  		<view class="content">
+  			<view class="name">{{item.name}}</view>
+  			<view class="text">{{item.text}}</view>
+  			<view class="piclist" wx:for="{{item.pics}}" wx:key="unique">
+  				<image src="{{item}}"/>
+  			</view>
+  			<view class="timebar">
+  				<view class="time">7分钟前</view>
+  				<view class="comment">● ●</view>
+  			</view>
+  		</view>
+  	</view>
+	</view>
 
 </view>
