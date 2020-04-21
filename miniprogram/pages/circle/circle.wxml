@@ -1,7 +1,7 @@
 <!--circle.wxml-->
 <view class="container">
   <view class="imgitem" wx:for="{{imgList}}" wx:key="unique">
-    <image class="img" src="../../images/{{item}}" background-size="cover">
+    <image class="img" src="{{item.url}}" background-size="cover">
     </image>
   </view>
 </view>

@@ -1,16 +1,16 @@
 <!--pages/article/article.wxml-->
 <view class="container">
-  <label class="title">{{title}}</label>
+  <label class="title">{{articleDetail.title}}</label>
   <view class="info">
-    <label class="author">千山慕雪 {{time}}</label>
-    <label class="time">2017-05-24</label>
+    <label class="author">{{articleDetail.author}}</label>
+    <label class="time">{{articleDetail.create_time}}</label>
   </view>
   <view class="imgwrap">
-    <image src="{{cover}}"></image>
+    <image src="{{articleDetail.cover}}"></image>
   </view>
-  <text class="content">{{content}}</text>
+  <text decode="{{true}}" space="{{true}}" class="content">{{articleDetail.content}}</text>
   <view class="ctrlbar">
-    <view>Views {{view}}  Like {{like}}</view>
+    <view>Views {{articleDetail.view}}  Like {{articleDetail.like}}</view>
     <view>Report</view>
   </view>
 </view>

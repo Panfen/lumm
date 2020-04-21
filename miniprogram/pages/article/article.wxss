@@ -10,10 +10,13 @@ page{
 .author{
   font-size: 0.8em;
   color: #7C7B9B;
+  display: block;
+  text-align: center;
 }
 .time{
   font-size:0.8em;
-  color:#8C8C8C; 
+  color: #8C8C8C; 
+  display: block;
 }
 .imgwrap{
   width: 90%;
