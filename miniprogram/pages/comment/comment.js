@@ -12,7 +12,7 @@ Page({
     })
   },
   bindKeyInput:function(e){
-    var value = e.detail.value.trim();
+    var value = e.detail.value.trim()
     if(value.length > 0){
       this.setData({
         valid: 'valid',
@@ -25,7 +25,7 @@ Page({
     }
   },
   submitAct:function(){
-    var that = this;
+    var that = this
     if(this.data.comment.length > 0){
       wx.showToast({
         title: 'succed!',
@@ -39,9 +39,9 @@ Page({
               time: new Date().getTime()
             }
           })
-          wx.navigateBack();
+          wx.navigateBack()
         }
-      });
+      })
     }
   }
 })

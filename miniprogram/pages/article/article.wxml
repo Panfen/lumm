@@ -8,7 +8,7 @@
   <view class="imgwrap">
     <image src="{{articleDetail.cover}}"></image>
   </view>
-  <text decode="{{true}}" space="{{true}}" class="content">{{articleDetail.content}}</text>
+  <rich-text class="content" nodes="{{articleDetail.content}}"></rich-text>
   <view class="ctrlbar">
     <view>Views {{articleDetail.view}}  Like {{articleDetail.like}}</view>
     <view>Report</view>

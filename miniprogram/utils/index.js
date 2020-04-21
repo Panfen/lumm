@@ -1,16 +1,16 @@
 const formatTime = (date) => {
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':');
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
 const formatNumber = (n) => {
-  n = n.toString();
-  return n[1] ? n : '0' + n;
+  n = n.toString()
+  return n[1] ? n : '0' + n
 }
 
 
@@ -20,19 +20,19 @@ const formatNumber = (n) => {
  * @return {[type]}            [description]
  */
 const fetchDatabase = (collection, params) => {
-  const db = wx.cloud.database();
+  const db = wx.cloud.database()
   return new Promise((resolve, reject) => {
     db.collection(collection).where({
       ...params
     }).get({
       success: res => {
-        resolve(res.data);
+        resolve(res.data)
       },
       fail: err => {
         reject(err)
       }
-    });
-  });
+    })
+  })
 }
 
 
