@@ -24,33 +24,89 @@
 
 .forumlist {
   width: 100%;
-  padding: 20rpx;
   box-sizing: border-box;
   min-height: 100%;
   background: #fff;
 }
 
 .forumlist .forumitem {
-  display: flex;
-  padding-bottom: 40rpx;
-  border-bottom: 1rpx solid #f7f7f7;
+  position: relative;
+  padding-bottom: 20rpx;
 }
 
-.forumlist .forumitem .avatar image {
+.forumlist .forumitem::before, 
+.forumlist .forumitem::after,
+.forumlist .forumitem .actbar::after {
+  content: '';
+  display: block;
+  height: 1rpx;
+  width: 100%;
+  background: #f0f0f0;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+}
+
+.forumlist .forumitem::before {
+  top: 0;
+}
+
+.forumlist .forumitem::after {
+  bottom: 0;  
+}
+
+.forumlist .forumitem .topbar {
+  display: flex;
+  padding: 30rpx 30rpx 0;
+  margin-bottom: 10rpx;
+}
+
+.forumlist .forumitem .topbar .avatar image {
   width: 100rpx;
   height: 100rpx;
-  border-radius: 10rpx;
+  margin-right: 20rpx;
+  border-radius: 50rpx;
+}
+
+.forumlist .forumitem .topbar .name {
+  font-size: 34rpx;
+  color: coral;
+}
+
+.forumlist .forumitem .topbar .time {
+  font-size: 28rpx;
+  color: #999;
 }
 
 .forumlist .forumitem .content {
   flex: 1;
-  margin-left: 20rpx;
+  color: #333;
+  padding: 0 20rpx;
   font-size: 32rpx;
 }
 
 .forumlist .forumitem .content .name {
   font-size: 32rpx;
   color: #5F668F;
+}
+
+.forumlist .forumitem .actbar {
+  margin-top: 20rpx;
+  display: flex;
+  padding: 10rpx 100rpx;
+  position: relative;
+  display: flex;
+  color: #aaa;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+
+.forumlist .forumitem .actbar .iconfont {
+  padding-right: 10rpx;
+}
+
+.forumlist .forumitem .actbar::after {
+  top: 0;
 }
 
 .forumlist .forumitem .content .piclist {
@@ -60,27 +116,4 @@
 .forumlist .forumitem .content .piclist image {
   width: 400rpx;
   height: 400rpx;
-  border: 1rpx solid #f7f7f7;
-}
-
-.forumlist .forumitem .content .timebar {
-  margin-top: 20rpx;
-  display: flex;
-  justify-content: space-between;
-}
-
-.forumlist .forumitem .content .timebar .time {
-  color: #999;
-  font-size: 24rpx;
-} 
-
-.forumlist .forumitem .content .timebar .comment {
-  font-size: 24rpx;
-  background: #F8F8F8;
-  color: #7E8FC2;
-  width: 60rpx;
-  height: 38rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

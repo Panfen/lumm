@@ -9,19 +9,30 @@
 
   <view class="forumlist" wx:for="{{list}}" wx:key="unique">
   	<view class="forumitem">
-  		<view class="avatar">
-  			<image src="{{item.avatar}}"/>
-  		</view>
+			<!-- 头像 名字 时间 -->
+			<view class="topbar">
+				<view class="avatar">
+					<image src="{{item.avatar}}"/>
+				</view>
+				<view>
+					<view class="name">{{item.name}}</view>
+					<view class="time">7分钟前</view>
+				</view>
+			</view>
+
+			<!-- 内容区 -->
   		<view class="content">
-  			<view class="name">{{item.name}}</view>
   			<view class="text">{{item.text}}</view>
   			<view class="piclist" wx:for="{{item.pics}}" wx:key="unique">
   				<image src="{{item}}"/>
   			</view>
-  			<view class="timebar">
-  				<view class="time">7分钟前</view>
-  				<view class="comment">● ●</view>
-  			</view>
+			</view>
+
+			<!-- 底部操作栏 -->
+			<view class="actbar">
+				<view><icon class="iconfont icon-fenxiang"></icon>17</view>
+				<view><icon class="iconfont icon-taolunqu"></icon>12</view>
+				<view><icon class="iconfont icon-dianzan"></icon>54</view>
   		</view>
   	</view>
 	</view>
