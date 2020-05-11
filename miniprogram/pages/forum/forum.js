@@ -2,8 +2,8 @@ const { getDataByType, showErrorInfo } = require('../../utils/index.js')
 
 Page({
   data: {
-  	currentType: '0',
-  	list: []
+    list: [],
+    selectedBar: 'focus'
   },
 
   onLoad: function(options) {
@@ -17,8 +17,8 @@ Page({
     list ? this.setData({ list }) : showErrorInfo(berr)
   },
 
-  onChangeType: function (e) {
-  	this.setData({ currentType: e.currentTarget.dataset.type })
+  onTabChange: function (e) {
+  	this.setData({ selectedBar: e.currentTarget.dataset.tab })
   	this.getData()
   }
 

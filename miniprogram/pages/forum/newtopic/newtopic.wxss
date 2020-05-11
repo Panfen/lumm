@@ -1,0 +1,17 @@
+.inputbox {
+  width: 100%;
+}
+
+.inputbox textarea {
+  font-size: 30rpx;
+  color: #666;
+  padding: 20rpx;
+  min-height: 140rpx;
+}
+
+.camera {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  background: #eee;
+}

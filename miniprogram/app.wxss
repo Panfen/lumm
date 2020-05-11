@@ -1,12 +1,21 @@
 /**iconfont**/
 @import 'style/iconfont.wxss';
 
+page {
+  min-height: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100%;
   box-sizing: border-box;
-} 
+}
+
+.whitebg {
+  background: #fff;
+}
 
 button {
   background: initial;
@@ -25,4 +34,19 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.underline {
+  position: relative;
+}
+.underline::after {
+  content: '';
+  display: block;
+  height: 1rpx;
+  width: 100%;
+  background: #f0f0f0;
+  transform: scaleY(0.5);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

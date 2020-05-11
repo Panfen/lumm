@@ -1,10 +1,10 @@
 <view class="container">
-  <view class="filter-wrap">
-    <button size="mini" class="{{currentType === '0' ? 'select' : ''}}" data-type="0" bindtap="onChangeType">全部</button>
-    <button size="mini" class="{{currentType === '1' ? 'select' : ''}}"  data-type="1" bindtap="onChangeType">日常</button>
-    <button size="mini" class="{{currentType === '2' ? 'select' : ''}}"  data-type="2" bindtap="onChangeType">交友</button>
-    <button size="mini" class="{{currentType === '3' ? 'select' : ''}}"  data-type="3" bindtap="onChangeType">LOST</button>
-    <button size="mini" class="{{currentType === '4' ? 'select' : ''}}"  data-type="4" bindtap="onChangeType">出售</button>
+  <view class="filter-wrap underline">
+    <view class="focus item {{selectedBar === 'focus' ? 'selected' : ''}}" bindtap="onTabChange" data-tab="focus">关注</view>
+		<view class="recommend item {{selectedBar === 'recommend' ? 'selected' : ''}}"  bindtap="onTabChange" data-tab="recommend">推荐</view>
+		<navigator url="/pages/forum/newtopic/newtopic">
+			<view class="new">+</view>
+		</navigator>
   </view>
 
   <view class="forumlist" wx:for="{{list}}" wx:key="unique">

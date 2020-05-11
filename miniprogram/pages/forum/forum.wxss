@@ -4,22 +4,31 @@
 
 .filter-wrap {
   padding: 20rpx;
-  background: #f7f7f7;
+  width: 100%;
+  background: #fff;
   display: flex;
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.filter-wrap button {
-  background: #fff;
-  font-size: 30rpx;
-  font-weight: 500;
-  margin: 6rpx 8rpx;
+.filter-wrap .focus {
+  margin-right: 20rpx;
 }
 
-.filter-wrap button.select {
-  color: #fff;
-  background: #07C160;
-  border: none;
+.filter-wrap .item.selected {
+  color: #222;
+  font-weight: bold;
+}
+
+.filter-wrap .new {
+  position: absolute;
+  font-size: 50rpx;
+  right: 40rpx;
+  color: #666;
+  top: 0rpx;
 }
 
 .forumlist {
@@ -114,6 +123,6 @@
 }
 
 .forumlist .forumitem .content .piclist image {
-  width: 400rpx;
-  height: 400rpx;
+  width: 300rpx;
+  height: 300rpx;
 }
