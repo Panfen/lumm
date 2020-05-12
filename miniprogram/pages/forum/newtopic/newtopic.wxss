@@ -1,17 +1,26 @@
 .inputbox {
   width: 100%;
+  padding-bottom: 40rpx;
 }
 
 .inputbox textarea {
   font-size: 30rpx;
   color: #666;
-  padding: 20rpx;
+  padding: 30rpx;
   min-height: 140rpx;
 }
 
 .camera {
   width: 180rpx;
   height: 180rpx;
-  margin: 20rpx;
+  margin: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #eee;
+}
+
+.camera .icon-xiangji{
+  color: #999;
+  font-size: 70rpx;
 }

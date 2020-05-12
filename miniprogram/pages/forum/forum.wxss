@@ -23,12 +23,12 @@
   font-weight: bold;
 }
 
-.filter-wrap .new {
+.filter-wrap .add {
   position: absolute;
-  font-size: 50rpx;
+  font-size: 46rpx;
   right: 40rpx;
   color: #666;
-  top: 0rpx;
+  top: 6rpx;
 }
 
 .forumlist {

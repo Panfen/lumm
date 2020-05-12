@@ -2,6 +2,9 @@
 <view class="container whitebg">
   <view class="inputbox">
     <textarea placeholder="这一刻要分享的内容..." auto-height />
-    <view class="camera"></view>
+    <view class="camera ">
+      <icon class="iconfont icon-xiangji"></icon>
+    </view>
+
   </view>
 </view>

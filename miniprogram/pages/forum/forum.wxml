@@ -3,7 +3,7 @@
     <view class="focus item {{selectedBar === 'focus' ? 'selected' : ''}}" bindtap="onTabChange" data-tab="focus">关注</view>
 		<view class="recommend item {{selectedBar === 'recommend' ? 'selected' : ''}}"  bindtap="onTabChange" data-tab="recommend">推荐</view>
 		<navigator url="/pages/forum/newtopic/newtopic">
-			<view class="new">+</view>
+			<icon class="iconfont icon-zengjia add"></icon>
 		</navigator>
   </view>
 
