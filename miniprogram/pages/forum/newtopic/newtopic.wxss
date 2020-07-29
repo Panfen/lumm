@@ -7,20 +7,51 @@
   font-size: 30rpx;
   color: #666;
   padding: 30rpx;
-  min-height: 140rpx;
+  min-height: 180rpx;
 }
 
-.camera {
+.imgbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgbox .imgitem {
+  display: flex;
+}
+.imgbox .imgitem .img {
   width: 180rpx;
   height: 180rpx;
-  margin: 0 30rpx;
+  margin: 30rpx 0 0 30rpx;
+}
+.imgbox .camera {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 30rpx 0 0 30rpx;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #eee;
 }
 
-.camera .icon-xiangji{
+.imgbox .camera .icon-xiangji{
   color: #999;
   font-size: 70rpx;
+}
+
+.submit-view {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.submit-view button {
+  border-radius: 0px;
+  font-size: 14px;
+  height: 90rpx !important;
+  width: 100% !important;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

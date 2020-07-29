@@ -1,10 +1,18 @@
 <!--miniprogram/pages/forum/newtopic/newtopic.wxml-->
 <view class="container whitebg">
   <view class="inputbox">
-    <textarea placeholder="这一刻要分享的内容..." auto-height />
-    <view class="camera ">
-      <icon class="iconfont icon-xiangji"></icon>
+    <textarea placeholder="这一刻要分享的内容..." auto-height bindinput="onTopicTextChange" />
+    <view class="imgbox">
+      <view class="imgitem" wx:for="{{imgList}}" wx:key="unique">
+        <image class="img" src="{{item}}" background-size="cover">
+        </image>
+      </view>
+      <view class="camera" bindtap="chooseImage">
+        <icon class="iconfont icon-xiangji"></icon>
+      </view>
     </view>
-
+  </view>
+  <view class="submit-view">
+    <button type="primary" bindtap="onSubmitTopic">发布</button>
   </view>
 </view>
